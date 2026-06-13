@@ -1,456 +1,686 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>교육자용 가이드북</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand">교육자용 가이드북</div>
-    <nav class="guide-tabs" aria-label="가이드 목록">
-      <a class="active" href="#guide-arbitrage" data-view-link="guide-arbitrage">Arbitrage 가이드</a>
-      <a href="#guide-mt4" data-view-link="guide-mt4">MT4 자동매매 가이드</a>
-    </nav>
-    <nav class="resource-nav" aria-label="자료실">
-      <a href="#resources" data-view-link="resources-view">자료실</a>
-    </nav>
-  </header>
-  <main class="layout">
-    <aside class="toc hidden" data-view-toc="guide-mt4" aria-label="문서 목차">
-      <div class="toc-group">
-        <div class="toc-title">MT4 자동매매 회원가입 및 계좌개설</div>
-        <a href="#signup"><span class="toc-number">01</span>회원가입</a>
-        <a href="#verify"><span class="toc-number">02</span>이메일 & 휴대폰 인증</a>
-        <a href="#kyc"><span class="toc-number">03</span>KYC 신원 인증</a>
-        <a href="#mt4-account"><span class="toc-number">04</span>MT4 거래 계좌 개설</a>
-        <a href="#deposit"><span class="toc-number">05</span>증거금 입금</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교육자용 가이드</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-home">
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <button class="brand" type="button" data-guide-target="home" aria-label="교육자용 가이드 홈">
+          <span>
+            <strong>교육자용 가이드</strong>
+          </span>
+        </button>
+        <nav class="header-guide-switch" aria-label="가이드 선택">
+          <button class="header-guide-button" type="button" data-guide-target="xlence">
+            Xlence 회원가입 및 MT4 설치
+          </button>
+          <button class="header-guide-button" type="button" data-guide-target="mt4-run">
+            MT4 실행 및 설정
+          </button>
+          <button class="header-guide-button" type="button" data-guide-target="bollinger-auto">
+            볼린저 밴드 자동매매 세팅 방법
+          </button>
+        </nav>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="guide-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">메뉴 열기</span>
+        </button>
       </div>
-      <div class="toc-group">
-        <div class="toc-title">MT4 자동매매 다운로드 및 실행</div>
-        <a href="#mt4-download"><span class="toc-number">01</span>MT4 다운로드</a>
-        <a href="#mt4-login"><span class="toc-number">02</span>MT4 거래계좌 로그인</a>
-      </div>
-    </aside>
-    <aside class="toc hidden" data-view-toc="resources-view" aria-label="자료실 목차">
-      <div class="toc-group">
-        <div class="toc-title">자료실</div>
-        <a href="#resource-links"><span class="toc-number">01</span>바로가기 링크</a>
-        <a href="#resource-downloads"><span class="toc-number">02</span>자료 다운로드</a>
-      </div>
-    </aside>
-    <aside class="toc" data-view-toc="guide-arbitrage" aria-label="Arbitrage 목차">
-      <div class="toc-group">
-        <div class="toc-title">Arbitrage 가이드</div>
-        <a href="#arbitrage-notice"><span class="toc-number">01</span>사전 고지 사항</a>
-        <a href="#arbitrage-tools"><span class="toc-number">02</span>설치 파일</a>
-        <a href="#arbitrage-exchanges"><span class="toc-number">03</span>코인 거래소 세팅</a>
-        <a href="#arbitrage-basics"><span class="toc-number">04</span>기본 이해도 확인</a>
-        <a href="#arbitrage-practice"><span class="toc-number">05</span>트론 입출금 실습</a>
-        <a href="#arbitrage-safety"><span class="toc-number">06</span>실습 중 안전 체크</a>
-      </div>
-    </aside>
-    <article id="guide-mt4" class="content guide-view hidden">
-      <section class="hero" id="guide-mt4-overview">
-        <p class="eyebrow">교육자용 운영 가이드</p>
-        <h1>MT4 자동매매 회원가입 및 계좌개설</h1>
-        <p>회원가입부터 이메일·휴대폰 인증, KYC 승인, MT4 라이브 계좌 개설, 증거금 입금까지 순서대로 안내합니다.</p>
-      </section>
+    </header>
 
-      <section id="signup" class="step-section">
-        <div class="section-head"><span>01</span><h2>회원가입</h2></div>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p><a href="https://short.xlence.com/lq6" target="_blank" rel="noreferrer">Xlence Korea 사이트</a> 접속해주세요.</p></li>
-          <li><span class="step-badge">2</span><p><strong>정보 입력</strong> 후 성함, 전화번호, 이메일, 비밀번호를 입력하고 계좌 개설 버튼을 클릭합니다.</p></li>
-        </ul>
-        <p class="warning">성함은 신분증과 동일하게 입력해야 KYC 심사 통과가 가능합니다.</p>
-        <div class="figure-stack">
-          <figure>
-            <img src="./assets/image-05.jpeg" alt="회원가입 정보 입력 화면" />
-            <figcaption>회원가입 입력 칸에 이름, 전화번호, 비밀번호, 이메일을 입력해주시면 됩니다.</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/image-01.jpeg" alt="계좌개설 버튼 화면" />
-            <figcaption>약관을 체크 후「계좌개설」버튼을 눌러주세요.</figcaption>
-          </figure>
-        </div>
-      </section>
+    <div class="layout" id="top">
+      <aside class="sidebar" id="guide-nav">
+        <nav class="chapter-nav" aria-label="현재 가이드 목차">
+          <p class="sidebar-label">목차</p>
+          <ol data-guide-nav="xlence">
+            <li><a href="#xlence-signup">회원가입</a></li>
+            <li class="nav-step"><a href="#xlence-signup-step1">Step 1. 사이트 접속</a></li>
+            <li class="nav-step"><a href="#xlence-signup-step2">Step 2. 계좌 설정</a></li>
+            <li class="nav-step"><a href="#xlence-signup-step3">Step 3. 인증 완료</a></li>
+            <li class="nav-step"><a href="#xlence-signup-step4">Step 4. 프로필 작성</a></li>
+            <li><a href="#mt4-install">MT4 설치</a></li>
+            <li class="nav-step"><a href="#mt4-install-step1">Step 1. 설치 파일 다운로드</a></li>
+            <li class="nav-step"><a href="#mt4-install-step2">Step 2. 복수실행 설정</a></li>
+            <li><a href="#xlence-deposit">입금</a></li>
+            <li class="nav-step"><a href="#xlence-deposit-step1">Step 1. 입금 화면 이동</a></li>
+            <li class="nav-step"><a href="#xlence-deposit-step2">Step 2. 암호화폐 입금</a></li>
+            <li class="nav-step"><a href="#xlence-deposit-step3">Step 3. 온라인 뱅킹 입금</a></li>
+            <li class="nav-step"><a href="#xlence-deposit-notice">입출금 공지사항</a></li>
+          </ol>
+          <ol data-guide-nav="mt4-run" hidden>
+            <li><a href="#mt4-run">MT4 실행 및 설정</a></li>
+            <li class="nav-step"><a href="#mt4-run-step1">Step 1. 계좌 로그인</a></li>
+            <li class="nav-step"><a href="#mt4-run-step2">Step 2. 세팅 주소</a></li>
+            <li class="nav-step"><a href="#mt4-run-step3">Step 3. 파일 설치</a></li>
+          </ol>
+          <ol data-guide-nav="bollinger-auto" hidden>
+            <li><a href="#bollinger-auto">볼린저 밴드 자동매매 세팅</a></li>
+            <li class="nav-step"><a href="#bollinger-auto-concept">볼린저 밴드란?</a></li>
+            <li class="nav-step"><a href="#bollinger-auto-step1">Step 1. 삽입과정</a></li>
+            <li class="nav-step"><a href="#bollinger-auto-step2">Step 2. 세팅 설명</a></li>
+            <li class="nav-step"><a href="#bollinger-auto-step3">Step 3. 보조지표 추가</a></li>
+          </ol>
+        </nav>
+      </aside>
 
-      <section id="verify" class="step-section">
-        <div class="section-head"><span>02</span><h2>이메일 & 휴대폰 인증</h2></div>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>Xlence에서 온 메일의 인증 버튼을 클릭합니다.</p></li>
-          <li><span class="step-badge">2</span><p>모바일 인증 팝업에서 <strong>「요청 확인」</strong>을 클릭해 인증 문자를 전송받습니다.</p></li>
-          <li><span class="step-badge">3</span><p>전송받은 6자리 인증코드를 입력한 뒤 <strong>「확인」</strong>을 클릭합니다.</p></li>
-        </ul>
-        <div class="figure-stack">
-          <figure>
-            <img src="./assets/image-06.jpeg" alt="Gmail 받은편지함의 Xlence 메일" />
-            <figcaption>Gmail 받은편지함 — 빨간 박스의 Xlence 메일을 클릭해서 인증 버튼을 눌러주세요.</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/image-07.jpeg" alt="휴대폰 PIN 인증 팝업" />
-            <figcaption>휴대폰 PIN 인증 팝업창입니다.</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/image-08.jpeg" alt="모바일 인증번호 입력 화면" />
-            <figcaption>「요청 확인」클릭 후 받은 모바일 인증번호를 입력 → 「확인」</figcaption>
-          </figure>
-        </div>
-      </section>
+      <main class="guide" id="main">
+        <section class="guide-page home-page active" data-guide-page="home" aria-label="메인">
+          <div class="home-hero">
+            <p class="section-number">Guidebook</p>
+            <h1>교육자용 가이드</h1>
 
-      <section id="kyc" class="step-section">
-        <div class="section-head"><span>03</span><h2>KYC 신원 인증</h2></div>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>좌측 메뉴에서 <strong>「프로필」 → 「프로필 정보」</strong>를 클릭합니다.</p></li>
-          <li><span class="step-badge">2</span><p><strong>영문 성함, 한글 성함, 생년월일, 성별</strong>을 신분증과 동일하게 입력합니다.</p></li>
-          <li><span class="step-badge">3</span><p>주소 세부 정보 입력 시 <a href="https://juso24.com/english?keyword=" target="_blank" rel="noreferrer"><strong>주소 영문 변환</strong></a> 후 해당 칸에 입력합니다.</p></li>
-          <li><span class="step-badge">4</span><p>재무 프로필을 입력합니다. <strong>사진 참고 - 주석 : 본인주민번호 입력.</strong></p></li>
-          <li><span class="step-badge">5</span><p>거래 경험을 입력합니다. <strong>사진 참고</strong></p></li>
-          <li><span class="step-badge">6</span><p>프로필 문서에서 <strong>신분증 사진 업로드</strong> 후 Approved 상태가 될 때까지 대기합니다.</p></li>
-        </ul>
-        <table class="address-table">
-          <thead>
-            <tr>
-              <th>Xlence 주소 세부 정보</th>
-              <th>영문 주소 변환</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>주소 입력란 1</td><td>Street Address</td></tr>
-            <tr><td>주소 입력란 2</td><td>상세 주소</td></tr>
-            <tr><td>시/도</td><td>City</td></tr>
-            <tr><td>우편번호</td><td>Zip/Postal Code</td></tr>
-            <tr><td>도시/마을</td><td>State/Province/Region</td></tr>
-          </tbody>
-        </table>
-        <p class="warning">신분증 사진이 흐리거나 빛 반사가 있으면 거절될 수 있습니다. 승인 이후 다음 단계를 진행합니다.</p>
-        <div class="figure-stack compact">
-          <figure>
-            <img src="./assets/image-09.jpeg" alt="프로필 정보 입력 화면" />
-            <figcaption>프로필 정보 입력 화면입니다.</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/image-11.png" alt="재무 프로필 입력 화면" />
-            <figcaption>재무 프로필 입력이며 동일하게 선택하셔야 합니다.</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/image-12.png" alt="거래 정보 입력 화면" />
-            <figcaption>거래 정보 입력이면 동일하게 선택하셔야 합니다.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="mt4-account" class="step-section">
-        <div class="section-head"><span>04</span><h2>MT4 거래 계좌 개설</h2></div>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>좌측 메뉴에서 <strong>「계정」</strong>을 클릭한 뒤 <strong>「+ 계정 추가」 → 「라이브 거래 계좌」 선택</strong>을 진행합니다.</p></li>
-          <li><span class="step-badge">2</span><p>계정 유형에서 <strong>MT4 ‘Xlence Essential’</strong>을 선택합니다.</p></li>
-          <li><span class="step-badge">3</span><p>통화 USD, 레버리지 1:1000, 비밀번호를 설정한 뒤 <strong>「계좌 만들기」</strong>를 클릭합니다.</p></li>
-          <li><span class="step-badge">4</span><p>생성된 <strong>계좌번호 · 서버명 · 비밀번호</strong>를 저장합니다.</p></li>
-        </ul>
-        <p class="warning">MT5가 아닌 MT4를 선택해야 합니다.</p>
-        <div class="figure-stack">
-          <figure>
-            <img src="./assets/image-02.jpeg" alt="MT4 계좌 개설 화면" />
-            <figcaption>계좌 개설 화면이며 MT5 계좌를 만들면 EA가 적용되지 않습니다. 반드시 MT4 선택하셔야 합니다.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="deposit" class="step-section">
-        <div class="section-head"><span>05</span><h2>증거금 입금</h2></div>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>포털의 <strong>「계정」</strong> 메뉴에서 생성한 계좌의 <strong>「입금하기」</strong> 버튼을 클릭합니다.</p></li>
-          <li><span class="step-badge">2</span><p>입금 방식을 선택하고 금액을 입력합니다.</p></li>
-          <li><span class="step-badge">3</span><p>완료 후 계좌 잔액이 <strong>반영됐는지 확인</strong>합니다.</p></li>
-        </ul>
-        <div class="figure-stack">
-          <figure>
-            <img src="./assets/image-03.jpeg" alt="입금하기 버튼 및 입금 방식 선택 화면" />
-            <figcaption>계좌 화면 — 「입금하기」 버튼을 클릭해 입금 방식 선택 후 입금합니다.</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/image-04.jpeg" alt="입금 완료 화면" />
-            <figcaption>입금 완료 화면 — 여기까지 완료되면 Xlence 계정 생성이 모두 끝납니다.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="hero document-hero" id="guide-mt4-download">
-        <p class="eyebrow">MT4 자동매매 가이드</p>
-        <h1>MT4 자동매매 다운로드 및 실행</h1>
-        <p>MT4 프로그램을 다운로드하고 설치한 뒤, 발급받은 거래 계좌로 로그인하는 절차입니다.</p>
-      </section>
-
-      <section id="mt4-download" class="step-section">
-        <div class="section-head"><span>01</span><h2>MT4 다운로드</h2></div>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p><a href="https://www.xlence.com/en/platforms/metatrader-4/metatrader-4-windows/" target="_blank" rel="noreferrer"><strong>「Windows용 MT4」</strong></a>로 이동하여 다운로드 후 설치합니다.</p></li>
-          <li><span class="step-badge">2</span><p>설치 과정은 기본값으로 설정하셔도 무관하며 설치 완료 후 MT4를 실행합니다.</p></li>
-        </ul>
-        <div class="figure-stack">
-          <figure>
-            <img src="./assets/mt4-download-01.png" alt="MT4 Windows 다운로드 화면" />
-            <figcaption>Download MT4 for Windows 버튼을 눌러 다운로드를 진행해주세요.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="mt4-login" class="step-section">
-        <div class="section-head"><span>02</span><h2>MT4 거래계좌 로그인</h2></div>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>초기 설치 파일 다운로드가 완료되면 다음을 눌러주세요.</p></li>
-          <li><span class="step-badge">2</span><p>현재 거래 계좌를 선택한 후 로그인과 비밀번호를 입력해주세요.</p></li>
-        </ul>
-        <p class="warning">로그인은 발급한 계좌번호이며 비밀번호는 계좌개설하며 지정한 비밀번호입니다.<br>MT4는 계좌번호와 비밀번호로 로그인하므로 혼동에 주의해주세요.</p>
-        <div class="figure-stack">
-          <figure>
-            <img src="./assets/mt4-download-02.png" alt="MT4 거래계좌 로그인 화면" />
-            <figcaption>현재 거래 계좌를 선택하고 계좌번호와 비밀번호를 입력해 로그인합니다.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-    </article>
-    <article id="guide-arbitrage" class="content guide-view active">
-      <section class="hero">
-        <p class="eyebrow">교육자용 운영 가이드</p>
-        <h1>Arbitrage 가이드</h1>
-        <p>거래소 기본 세팅, 인증 도구 준비, 계산 기준, 트론 입출금 실습까지 교육 흐름에 맞춰 정리한 가이드입니다.</p>
-      </section>
-
-      <section id="arbitrage-notice" class="step-section">
-        <div class="section-head"><span>01</span><h2>사전 고지 사항</h2></div>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>각 거래소의 회원가입 및 KYC 인증을 먼저 완료해야 합니다.</p></li>
-          <li><span class="step-badge">2</span><p>첫 원화 입금 시점으로부터 72시간 동안 디지털 자산 출금이 제한됩니다.</p></li>
-        </ul>
-        <p class="warning"><a href="https://support.bithumb.com/hc/ko/articles/51036416906265-%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0-%EC%B6%9C%EA%B8%88-%EC%A7%80%EC%97%B0%EC%A0%9C%EB%8F%84%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94" target="_blank" rel="noreferrer">가상자산 출금 지연제도</a>를 사전에 안내합니다.</p>
-        <div class="figure-stack">
-          <figure>
-            <img src="./assets/arbitrage-01.png" alt="가상자산 출금 지연제도 안내 화면" />
-            <figcaption>첫 원화 입금 이후 72시간 출금 제한 내용을 고객에게 먼저 안내합니다.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="arbitrage-tools" class="step-section">
-        <div class="section-head"><span>02</span><h2>설치 파일</h2></div>
-        <h3 class="subhead">Authenticator 인증 도구 설치</h3>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p><a href="https://chromewebstore.google.com/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai?hl=ko" target="_blank" rel="noreferrer">Authenticator 인증 도구</a> 설치 페이지로 이동합니다.</p></li>
-          <li><span class="step-badge">2</span><p>인증 도구를 크롬에 추가한 뒤 우측 상단 확장 프로그램에서 고정합니다.</p></li>
-          <li><span class="step-badge">3</span><p>모바일 인증 도구에서 계정 전송을 선택하고 QR 코드를 발급받습니다.</p></li>
-          <li><span class="step-badge">4</span><p>컴퓨터에서 QR 코드 스캔으로 인증 도구를 연결합니다.</p></li>
-        </ul>
-        <p class="warning">업비트는 OTP 코드가 필요하지 않습니다.</p>
-        <div class="carousel" data-carousel>
-          <div class="carousel-stage">
-            <figure class="carousel-slide active">
-              <img src="./assets/arbitrage-02.png" alt="Authenticator 설치 이동 화면" />
-              <figcaption>Authenticator 인증 도구 설치를 위해 다운로드 사이트로 이동합니다.</figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <img src="./assets/arbitrage-03.png" alt="Authenticator 추가 화면" />
-              <figcaption>Authenticator 인증 도구를 추가합니다.</figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <img src="./assets/arbitrage-04.png" alt="Authenticator 추가 확인 화면" />
-              <figcaption>Authenticator 인증 도구 추가를 확인합니다.</figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <img src="./assets/arbitrage-05.png" alt="확장 프로그램 고정 화면" />
-              <figcaption>크롬 우측 상단 확장 프로그램에서 Authenticator를 고정합니다.</figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <img src="./assets/arbitrage-06.jpeg" alt="모바일 인증 도구 계정 전송 화면" />
-              <figcaption>모바일 인증 도구에서 계정 전송 메뉴로 이동합니다.</figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <img src="./assets/arbitrage-07.png" alt="계정 내보내기 QR 코드 화면" />
-              <figcaption>계정 내보내기에서 QR 코드를 발급받습니다.</figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <img src="./assets/arbitrage-08.png" alt="QR 코드 스캔 화면" />
-              <figcaption>캡처한 QR 코드를 인증 도구에서 스캔합니다.</figcaption>
-            </figure>
+            <section class="quick-section" aria-label="바로가기">
+              <button class="quick-arrow" type="button" data-guide-target="xlence">
+                <span>바로가기</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </section>
           </div>
-          <div class="carousel-controls">
-            <button type="button" data-carousel-prev aria-label="이전 사진">‹</button>
-            <div class="carousel-dots" aria-label="사진 위치"></div>
-            <button type="button" data-carousel-next aria-label="다음 사진">›</button>
+        </section>
+
+        <section class="guide-page" data-guide-page="xlence" aria-label="Xlence 회원가입 및 MT4 설치" hidden>
+          <div class="guide-title">
+            <p class="section-number">Guide 01</p>
+            <h1>Xlence 회원가입 및 MT4 설치</h1>
           </div>
-        </div>
 
-        <h3 class="subhead">빗썸 출금한도 오버레이</h3>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>자료실에서 <a href="./assets/bithumb-withdrawal-limit-overlay.zip" download>빗썸 출금한도 오버레이 파일</a>을 다운로드합니다.</p></li>
-          <li><span class="step-badge">2</span><p>압축 해제 후 크롬 확장 프로그램 페이지에서 개발자 모드를 활성화합니다.</p></li>
-          <li><span class="step-badge">3</span><p>압축 해제된 확장 프로그램 로드를 선택하고 정상 작동 여부를 확인합니다.</p></li>
-        </ul>
-        <div class="figure-stack compact">
-          <figure><img src="./assets/arbitrage-09.png" alt="빗썸 출금한도 오버레이 자료실 안내" /><figcaption>자료실에서 빗썸 출금한도 오버레이 파일을 추가합니다.</figcaption></figure>
-          <figure><img src="./assets/arbitrage-10.png" alt="크롬 확장 프로그램 개발자 모드 화면" /><figcaption>개발자 모드 활성화 후 압축 해제된 확장 프로그램을 로드합니다.</figcaption></figure>
-        </div>
+          <section class="chapter" id="xlence-signup" aria-labelledby="xlence-signup-title">
+            <div class="chapter-heading">
+              <p class="section-number">01</p>
+              <h2 id="xlence-signup-title">회원가입하기</h2>
+              <p>Xlence 회원가입 후 계좌 설정과 인증, 프로필 정보 작성을 진행합니다.</p>
+            </div>
 
-        <h3 class="subhead">계산기 프로그램 및 계산 기준</h3>
-        <p><a href="https://heldercorreia.bitbucket.io/speedcrunch/" target="_blank" rel="noreferrer">SpeedCrunch</a> 사용을 권장합니다.</p>
-        <table class="address-table">
-          <thead><tr><th>항목</th><th>계산식</th></tr></thead>
-          <tbody>
-            <tr><td>해외 기준가</td><td>국내 코인 가격 ÷ 빗썸 기준 USDT 원화 가격</td></tr>
-            <tr><td>국내 기준가</td><td>해외 코인 가격 × 빗썸 기준 USDT 원화 가격</td></tr>
-            <tr><td>수익률</td><td>(국내 코인 가격 - 해외 코인 가격) ÷ 국내 코인 가격 × 100</td></tr>
-          </tbody>
-        </table>
-        <div class="figure-stack">
-          <figure><img src="./assets/arbitrage-11.png" alt="수익률 계산 예시 화면" /><figcaption>국내 가격, 해외 가격, USDT 기준가를 사용해 수익률을 계산합니다.</figcaption></figure>
-        </div>
-      </section>
+            <article class="step-card compact-media" id="xlence-signup-step1">
+              <div class="step-copy">
+                <span class="step-label">Step 1</span>
+                <h3>Xlence 사이트 접속 후 정보 입력하기</h3>
+                <p>
+                  <a href="https://short.xlence.com/pjk" target="_blank" rel="noopener noreferrer">Xlence 사이트</a>에
+                  접속해서 정보를 입력해주세요.
+                </p>
+                <div class="warning">
+                  성함은 영문으로 작성하며, 신분증과 동일하게 입력하셔야 KYC 심사가 통과합니다.
+                </div>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/mt4-signup-01-edited.png">
+                <img data-src="assets/screenshots/mt4-signup-01-edited.png" alt="Xlence 등록 정보 입력 화면" />
+                <figcaption>캡처 파일명: assets/screenshots/mt4-signup-01-edited.png</figcaption>
+              </figure>
+            </article>
 
-      <section id="arbitrage-exchanges" class="step-section">
-        <div class="section-head"><span>03</span><h2>코인 거래소 세팅</h2></div>
-        <table class="address-table">
-          <thead><tr><th>거래소</th><th>페이지</th><th>특이사항</th></tr></thead>
-          <tbody>
-            <tr><td>빗썸</td><td>거래소 / 입출금</td><td>-</td></tr>
-            <tr><td>업비트</td><td>거래소 / 입출금</td><td>-</td></tr>
-            <tr><td>바이낸스</td><td>거래소 / 입금 / 출금</td><td>-</td></tr>
-            <tr><td>비트겟</td><td>거래소 / 입금 / 출금</td><td>빗썸 출금 시 이름과 성을 반대로 입력하고 Verified에서 성함을 확인합니다.</td></tr>
-            <tr><td>바이비트</td><td>거래소 / 입금 / 출금</td><td>공개/비공개 설정을 공개로 변경하고 Trading Account로 변경합니다.</td></tr>
-          </tbody>
-        </table>
-        <p class="warning">페이지 설정은 교육자가 보기 편한 방식으로 조정해도 됩니다.</p>
-        <div class="carousel" data-carousel>
-          <div class="carousel-stage">
-            <figure class="carousel-slide active">
-              <img src="./assets/arbitrage-12.png" alt="바이비트 공개 설정 화면" />
-              <figcaption>바이비트 거래소에서 공개/비공개 설정을 공개로 변경합니다.</figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <img src="./assets/arbitrage-13.png" alt="Preference Settings 화면" />
-              <figcaption>우측 상단 프로필에서 Preference Settings로 이동합니다.</figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <img src="./assets/arbitrage-14.png" alt="Auto Transfer Deposits 설정 화면" />
-              <figcaption>Deposit 항목에서 Auto Transfer Deposits To Unified Trading Account를 선택합니다.</figcaption>
-            </figure>
+            <article class="step-card compact-media" id="xlence-signup-step2">
+              <div class="step-copy">
+                <span class="step-label">Step 2</span>
+                <h3>개인정보 및 계좌 설정 입력하기</h3>
+                <p>개인정보 및 계좌 설정을 위해 사진과 같이 입력해주세요.</p>
+              </div>
+              <div class="image-slider" data-slider>
+                <div class="slider-stage">
+                  <figure class="image-slot image-slide is-active is-missing" data-image="assets/screenshots/mt4-signup-02-edited.png">
+                    <img data-src="assets/screenshots/mt4-signup-02-edited.png" alt="Xlence 개인 정보 제공 입력 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/mt4-signup-02-edited.png</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/mt4-signup-03-edited.png" hidden>
+                    <img data-src="assets/screenshots/mt4-signup-03-edited.png" alt="Xlence 계좌 유형 및 세부 정보 입력 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/mt4-signup-03-edited.png</figcaption>
+                  </figure>
+                </div>
+                <div class="slider-controls" aria-label="Step 2 사진 선택">
+                  <button class="slider-arrow" type="button" data-slider-prev aria-label="이전 사진">&lt;</button>
+                  <button class="slider-dot is-active" type="button" data-slide-index="0" aria-label="1번 사진 선택" aria-pressed="true">1</button>
+                  <button class="slider-dot" type="button" data-slide-index="1" aria-label="2번 사진 선택" aria-pressed="false">2</button>
+                  <button class="slider-arrow" type="button" data-slider-next aria-label="다음 사진">&gt;</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="step-card" id="xlence-signup-step3">
+              <div class="step-copy">
+                <span class="step-label">Step 3</span>
+                <h3>휴대폰 및 이메일 인증 완료하기</h3>
+                <p>
+                  휴대폰 및 이메일 인증을 위해 <strong>「프로필」 → 「계좌」</strong>로 이동하여 인증을 완료해주세요.
+                </p>
+              </div>
+              <div class="image-stack">
+                <figure class="image-slot is-missing" data-image="assets/screenshots/mt4-verify-email.png">
+                  <img data-src="assets/screenshots/mt4-verify-email.png" alt="Xlence 이메일 인증 화면" />
+                  <figcaption>캡처 파일명: assets/screenshots/mt4-verify-email.png</figcaption>
+                </figure>
+                <figure class="image-slot is-missing" data-image="assets/screenshots/mt4-verify-mobile.png">
+                  <img data-src="assets/screenshots/mt4-verify-mobile.png" alt="Xlence 모바일 인증 화면" />
+                  <figcaption>캡처 파일명: assets/screenshots/mt4-verify-mobile.png</figcaption>
+                </figure>
+              </div>
+            </article>
+
+            <article class="step-card compact-media" id="xlence-signup-step4">
+              <div class="step-copy">
+                <span class="step-label">Step 4</span>
+                <h3>주소와 재무프로필 및 재무경험 작성하기</h3>
+                <p>
+                  주소와 재무프로필 및 재무경험에 대한 작성을 위해
+                  <strong>「프로필」 → 「프로필 정보」</strong>로 이동해주세요.
+                </p>
+                <div class="warning">주소는 영문으로 작성해주시며 사진과 같이 입력해주세요.</div>
+              </div>
+              <div class="image-slider" data-slider>
+                <div class="slider-stage">
+                  <figure class="image-slot image-slide is-active is-missing" data-image="assets/screenshots/profile-info-06-edited.png">
+                    <img data-src="assets/screenshots/profile-info-06-edited.png" alt="Xlence 주소 세부 정보 입력 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/profile-info-06-edited.png</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/profile-info-07-edited.png" hidden>
+                    <img data-src="assets/screenshots/profile-info-07-edited.png" alt="Xlence 재무 프로필 입력 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/profile-info-07-edited.png</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/profile-info-08-edited.png" hidden>
+                    <img data-src="assets/screenshots/profile-info-08-edited.png" alt="Xlence 거래 경험 입력 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/profile-info-08-edited.png</figcaption>
+                  </figure>
+                </div>
+                <div class="slider-controls" aria-label="Step 4 사진 선택">
+                  <button class="slider-arrow" type="button" data-slider-prev aria-label="이전 사진">&lt;</button>
+                  <button class="slider-dot is-active" type="button" data-slide-index="0" aria-label="1번 사진 선택" aria-pressed="true">1</button>
+                  <button class="slider-dot" type="button" data-slide-index="1" aria-label="2번 사진 선택" aria-pressed="false">2</button>
+                  <button class="slider-dot" type="button" data-slide-index="2" aria-label="3번 사진 선택" aria-pressed="false">3</button>
+                  <button class="slider-arrow" type="button" data-slider-next aria-label="다음 사진">&gt;</button>
+                </div>
+              </div>
+            </article>
+          </section>
+
+        </section>
+
+        <section class="guide-page" data-guide-page="xlence" aria-label="MT4 설치" hidden>
+          <div class="guide-title">
+            <p class="section-number">Guide 02</p>
+            <h1>MT4 설치</h1>
           </div>
-          <div class="carousel-controls">
-            <button type="button" data-carousel-prev aria-label="이전 사진">‹</button>
-            <div class="carousel-dots" aria-label="사진 위치"></div>
-            <button type="button" data-carousel-next aria-label="다음 사진">›</button>
+
+          <section class="chapter" id="mt4-install" aria-labelledby="mt4-install-title">
+            <div class="chapter-heading">
+              <p class="section-number">01</p>
+              <h2 id="mt4-install-title">MT4 설치</h2>
+              <p>MetaTrader4 설치 파일을 다운로드하고, 필요 시 여러 개의 MT4를 실행할 수 있도록 설정합니다.</p>
+            </div>
+
+            <article class="step-card compact-media" id="mt4-install-step1">
+              <div class="step-copy">
+                <span class="step-label">Step 1</span>
+                <h3>MetaTrader4 다운로드 후 설치하기</h3>
+                <p>
+                  <a href="https://www.xlence.com/en/platforms/metatrader-4/metatrader-4-windows/" target="_blank" rel="noopener noreferrer">MetaTrader4</a>를
+                  다운로드 받은 후 실행하여 설치를 완료해주세요.
+                </p>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/meta4 install 1.png">
+                <img data-src="assets/screenshots/meta4 install 1.png" alt="Xlence MetaTrader4 다운로드 버튼 위치" />
+                <figcaption>캡처 파일명: assets/screenshots/meta4 install 1.png</figcaption>
+              </figure>
+            </article>
+
+            <article class="step-card compact-media" id="mt4-install-step2">
+              <div class="step-copy">
+                <span class="step-label">Step 2</span>
+                <h3>MetaTrader4 복수실행 설정하기</h3>
+                <p>
+                  다운받은 파일을 실행 후 <strong>설정</strong>을 눌러 설치폴더 및 프로그램 그룹 이름 뒤에
+                  <strong>-1, -2</strong> 등을 입력한 다음 <strong>다음</strong>을 누르면 복수실행이 가능합니다.
+                </p>
+              </div>
+              <div class="image-slider" data-slider>
+                <div class="slider-stage">
+                  <figure class="image-slot image-slide is-active is-missing" data-image="assets/screenshots/meta4 install2.png">
+                    <img data-src="assets/screenshots/meta4 install2.png" alt="MetaTrader4 설치 프로그램 설정 버튼" />
+                    <figcaption>캡처 파일명: assets/screenshots/meta4 install2.png</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/meta4 install3.png" hidden>
+                    <img data-src="assets/screenshots/meta4 install3.png" alt="MetaTrader4 기본 설치 폴더와 프로그램 그룹 입력 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/meta4 install3.png</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/meta4 install4.png" hidden>
+                    <img data-src="assets/screenshots/meta4 install4.png" alt="MetaTrader4 복수실행용 설치 폴더와 프로그램 그룹 입력 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/meta4 install4.png</figcaption>
+                  </figure>
+                </div>
+                <div class="slider-controls" aria-label="MT4 복수실행 설정 사진 선택">
+                  <button class="slider-arrow" type="button" data-slider-prev aria-label="이전 사진">&lt;</button>
+                  <button class="slider-dot is-active" type="button" data-slide-index="0" aria-label="1번 사진 선택" aria-pressed="true">1</button>
+                  <button class="slider-dot" type="button" data-slide-index="1" aria-label="2번 사진 선택" aria-pressed="false">2</button>
+                  <button class="slider-dot" type="button" data-slide-index="2" aria-label="3번 사진 선택" aria-pressed="false">3</button>
+                  <button class="slider-arrow" type="button" data-slider-next aria-label="다음 사진">&gt;</button>
+                </div>
+              </div>
+            </article>
+          </section>
+
+        </section>
+
+        <section class="guide-page" data-guide-page="xlence" aria-label="입금" hidden>
+          <div class="guide-title">
+            <p class="section-number">Guide 03</p>
+            <h1>입금</h1>
           </div>
-        </div>
-        <p class="warning">해당 설정을 선택하지 않은 상태에서 거래하면 자산이 Funding Account로 이동할 수 있습니다.</p>
-      </section>
 
-      <section id="arbitrage-basics" class="step-section">
-        <div class="section-head"><span>04</span><h2>기본 이해도 확인</h2></div>
-        <p>교육 시작 후 고객이 주문 화면과 기본 거래 방식을 이해하는지 확인합니다. 이해가 부족하면 개념 설명을 먼저 진행하고, 이해도가 있으면 바로 실습으로 넘어갑니다.</p>
-        <div class="resource-board">
-          <article class="resource-card">
-            <h3>확인 항목</h3>
-            <p>매수와 매도 의미, 즉시 체결 가격, 가격과 수량 입력, 국내 거래와 해외 거래 차이를 확인합니다.</p>
-          </article>
-          <article class="resource-card">
-            <h3>설명 핵심</h3>
-            <p>국내 거래소는 원화, 해외 거래소는 USDT로 거래합니다. 해외 거래소에서 코인을 매도하면 다시 USDT로 바뀝니다.</p>
-          </article>
-        </div>
-        <h3 class="subhead">기본 개념 확인</h3>
-        <p>고객이 매수, 매도, 주문 가격, 수량을 이해하는지 확인하고 부족한 부분만 실제 화면에서 설명합니다.</p>
-        <h3 class="subhead">트론 수동 실습 전환</h3>
-        <p>기본 설명이 끝나면 트론 매수, 전송, 도착 확인, 수동 매도 순서로 실습합니다. 교육자는 대신 진행하지 않고 고객이 직접 버튼을 누르도록 안내합니다.</p>
-      </section>
+          <section class="chapter" id="xlence-deposit" aria-labelledby="xlence-deposit-title">
+            <div class="chapter-heading">
+              <p class="section-number">03</p>
+              <h2 id="xlence-deposit-title">입금</h2>
+            </div>
 
-      <section id="arbitrage-practice" class="step-section">
-        <div class="section-head"><span>05</span><h2>트론 입출금 실습</h2></div>
-        <p>트론 입출금 실습은 코인이 어느 화면에서 나가고 어느 화면으로 들어오는지 쉽게 보이도록 구성합니다.</p>
-        <table class="address-table">
-          <thead><tr><th>구분</th><th>화면 구성</th><th>정렬 방식</th></tr></thead>
-          <tbody>
-            <tr><td>왼쪽 화면</td><td>차트 / 출금 화면</td><td>Windows + 왼쪽 방향키</td></tr>
-            <tr><td>오른쪽 화면</td><td>차트 / 입금 화면</td><td>Windows + 오른쪽 방향키</td></tr>
-          </tbody>
-        </table>
-        <h3 class="subhead">실습 절차</h3>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>트론 매수</p></li>
-          <li><span class="step-badge">2</span><p>입금 주소 확인</p></li>
-          <li><span class="step-badge">3</span><p>출금 진행</p></li>
-          <li><span class="step-badge">4</span><p>도착 여부 확인</p></li>
-          <li><span class="step-badge">5</span><p>수동 매도</p></li>
-        </ul>
-        <p>고객이 최소 3회 이상 직접 진행할 수 있도록 반복합니다. 이 단계에서는 수익보다 흐름 이해와 반복 숙련을 우선합니다.</p>
-      </section>
+            <article class="step-card text-only" id="xlence-deposit-step1">
+              <div class="step-copy">
+                <span class="step-label">Step 1</span>
+                <h3>Xlence 입금 화면으로 이동하기</h3>
+                <p>
+                  Xlence 로그인 후 메인화면에서
+                  <strong>「거래계좌」 → 「입금」 → 「입금 방법 선택」</strong>을 진행해주세요.
+                </p>
+                <div class="warning">
+                  「입금 대상」 → 「거래계좌」를 선택하지 않을 시 내부 이체로 증거금을 이동해야 합니다.
+                </div>
+              </div>
+            </article>
 
-      <section id="arbitrage-safety" class="step-section">
-        <div class="section-head"><span>06</span><h2>실습 중 안전 체크</h2></div>
-        <p>입출금 실습에서는 매수보다 먼저 네트워크와 주소 확인을 진행합니다. 주소나 네트워크를 잘못 선택하면 자산 손실이 발생할 수 있으므로 매번 확인합니다.</p>
-        <ul class="action-list">
-          <li><span class="step-badge">1</span><p>양쪽 거래소의 입출금 네트워크가 정상인지 확인합니다.</p></li>
-          <li><span class="step-badge">2</span><p>출금 거래소와 입금 거래소의 네트워크가 같은지 확인합니다.</p></li>
-          <li><span class="step-badge">3</span><p>입금 주소는 반드시 거래소의 복사 버튼으로 복사합니다.</p></li>
-          <li><span class="step-badge">4</span><p>출금 전 주소 앞 3자리와 뒤 3자리를 확인합니다.</p></li>
-          <li><span class="step-badge">5</span><p>이 절차를 매수보다 먼저 진행하는 습관을 만듭니다.</p></li>
-        </ul>
-        <p class="warning">네트워크와 주소 확인은 모든 입출금 실습에서 반복합니다.</p>
-      </section>
-    </article>
-    <article id="resources-view" class="content guide-view hidden">
-      <section id="resources" class="hero">
-        <p class="eyebrow">교육자용 가이드북</p>
-        <h1>자료실</h1>
-        <p>가이드에서 사용하는 링크, 설치 파일, 자동매매 프로그램을 한곳에 모아둡니다.</p>
-      </section>
+            <article class="step-card compact-media" id="xlence-deposit-step2">
+              <div class="step-copy">
+                <span class="step-label">Step 2</span>
+                <h3>암호화폐 입금 방법</h3>
+                <p>
+                  <strong>「입금하기」 → 「디지털 자산」 → 「전송」</strong> 시
+                  <strong>QR 코드</strong> 또는 <strong>주소</strong>로 15분 이내 입금해주세요.
+                </p>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/xlence-deposit-digital-asset.png">
+                <img data-src="assets/screenshots/xlence-deposit-digital-asset.png" alt="Xlence 디지털 자산 입금 방법 선택 화면" />
+                <figcaption>캡처 파일명: assets/screenshots/xlence-deposit-digital-asset.png</figcaption>
+              </figure>
+            </article>
 
-      <section id="resource-links" class="resource-section">
-        <div class="section-head"><span>01</span><h2>바로가기 링크</h2></div>
-        <div class="resource-board">
-          <article class="resource-card">
-            <a href="https://short.xlence.com/lq6" target="_blank" rel="noreferrer">
-              <strong>Xlence Korea 사이트</strong>
-              <span>회원가입 및 계좌개설 접속 링크</span>
-            </a>
-            <a href="https://juso24.com/english?keyword=" target="_blank" rel="noreferrer">
-              <strong>주소 영문 변환</strong>
-              <span>KYC 주소 입력용 영문 주소 변환 링크</span>
-            </a>
-            <a href="https://www.xlence.com/en/platforms/metatrader-4/metatrader-4-windows/" target="_blank" rel="noreferrer">
-              <strong>MT4 Windows 다운로드</strong>
-              <span>MT4 설치 파일 다운로드 페이지</span>
-            </a>
-            <a href="https://support.bithumb.com/hc/ko/articles/51036416906265-%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0-%EC%B6%9C%EA%B8%88-%EC%A7%80%EC%97%B0%EC%A0%9C%EB%8F%84%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94" target="_blank" rel="noreferrer">
-              <strong>가상자산 출금 지연제도</strong>
-              <span>첫 원화 입금 후 72시간 출금 제한 안내</span>
-            </a>
-            <a href="https://chromewebstore.google.com/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai?hl=ko" target="_blank" rel="noreferrer">
-              <strong>Authenticator 인증 도구</strong>
-              <span>크롬 인증 도구 설치 페이지</span>
-            </a>
-            <a href="https://heldercorreia.bitbucket.io/speedcrunch/" target="_blank" rel="noreferrer">
-              <strong>SpeedCrunch 계산기</strong>
-              <span>Arbitrage 계산용 권장 계산기 프로그램</span>
-            </a>
-          </article>
-        </div>
-      </section>
-      <section id="resource-downloads" class="resource-section">
-        <div class="section-head"><span>02</span><h2>자료 다운로드</h2></div>
-        <div class="resource-board">
-          <article class="resource-card">
-            <a href="./assets/bithumb-withdrawal-limit-overlay.zip" download>
-              <strong>빗썸 출금한도 오버레이 파일</strong>
-              <span>크롬 확장 프로그램에 추가할 오버레이 ZIP 파일</span>
-            </a>
-          </article>
-        </div>
-      </section>
-    </article>
-  </main>
-  <script src="./script.js"></script>
-</body>
+            <article class="step-card compact-media" id="xlence-deposit-step3">
+              <div class="step-copy">
+                <span class="step-label">Step 3</span>
+                <h3>온라인 뱅킹 입금 방법</h3>
+                <p>
+                  <span class="flow-path">
+                    <strong>「입금하기」</strong><span>→</span>
+                    <strong>「온라인 뱅킹 송금」</strong><span>→</span>
+                    <strong>「전송」</strong>
+                  </span>
+                  이후
+                  <span class="flow-path">
+                    <strong>「전송지침」</strong><span>→</span>
+                    <strong>「이용동의」</strong><span>→</span>
+                    <strong>「제공동의」</strong><span>→</span>
+                    <strong>「계좌인증」</strong><span>→</span>
+                    <strong>「입금신청」</strong>
+                  </span>
+                  후 30분 이내 입금해주세요.
+                </p>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/xlence-deposit-online-banking.png">
+                <img data-src="assets/screenshots/xlence-deposit-online-banking.png" alt="Xlence 온라인 뱅킹 송금 입금 방법 선택 화면" />
+                <figcaption>캡처 파일명: assets/screenshots/xlence-deposit-online-banking.png</figcaption>
+              </figure>
+            </article>
+
+            <article class="deposit-notice" id="xlence-deposit-notice">
+              <p class="notice-kicker">입출금 공지사항</p>
+              <div class="notice-grid">
+                <section class="notice-panel" aria-labelledby="krw-notice-title">
+                  <h3 id="krw-notice-title">1. 원화 (KRW)</h3>
+                  <dl>
+                    <div>
+                      <dt>입금</dt>
+                      <dd>24시간, 주 7일 가능</dd>
+                    </div>
+                    <div>
+                      <dt>출금</dt>
+                      <dd>24시간 가능</dd>
+                    </div>
+                    <div>
+                      <dt>처리 시간</dt>
+                      <dd>평일 기준 10~20분 소요</dd>
+                    </div>
+                  </dl>
+                  <h4>유의사항</h4>
+                  <ul>
+                    <li>7,000달러 이상 출금 또는 자정 이후 출금 요청 시 지연 가능</li>
+                    <li>주말 출금 요청 시 다음 영업일에 진행</li>
+                    <li>주말 원화 출금은 오후 6시부터 자정 사이 소급 진행</li>
+                  </ul>
+                </section>
+
+                <section class="notice-panel" aria-labelledby="usdt-notice-title">
+                  <h3 id="usdt-notice-title">2. 테더 (USDT)</h3>
+                  <dl>
+                    <div>
+                      <dt>입금</dt>
+                      <dd>24시간, 주 7일 가능</dd>
+                    </div>
+                    <div>
+                      <dt>출금</dt>
+                      <dd>24시간 가능 (단, 수동 승인으로 원화출금보다 시간 소요)</dd>
+                    </div>
+                    <div>
+                      <dt>처리 시간</dt>
+                      <dd>평일 기준 10~20분 소요 (오후 1시 ~ 자정 요청 시)</dd>
+                    </div>
+                  </dl>
+                  <h4>유의사항</h4>
+                  <ul>
+                    <li>7,000달러 이상 출금 또는 자정 이후 출금 요청 시 지연 가능</li>
+                    <li>주말 출금 요청 시 다음 영업일에 진행</li>
+                    <li>주말 코인 출금은 오후 6시부터 오후 8시 사이 소급 진행</li>
+                  </ul>
+                </section>
+              </div>
+
+              <section class="cs-hours" aria-labelledby="cs-hours-title">
+                <h3 id="cs-hours-title">CS 운영 시간 안내</h3>
+                <ol>
+                  <li>평일 CS 운영시간은 오전 9시부터 자정까지 운영됩니다.</li>
+                  <li>주말 및 공휴일은 한국 공휴일과 현지 공휴일에 맞춰 안내드리며 기본적으로 오후 6시부터 오후 11시까지 운영됩니다. 주말 업무 시에는 CS 응대에 지연이 있을 수 있습니다.</li>
+                </ol>
+              </section>
+            </article>
+          </section>
+        </section>
+
+        <section class="guide-page" data-guide-page="mt4-run" aria-label="MT4 실행 및 설정" hidden>
+          <div class="guide-title">
+            <p class="section-number">Guide 04</p>
+            <h1>MT4 실행 및 설정</h1>
+          </div>
+
+          <section class="chapter" id="mt4-run" aria-labelledby="mt4-run-title">
+            <div class="chapter-heading">
+              <p class="section-number">04</p>
+              <h2 id="mt4-run-title">MT4 실행 및 설정</h2>
+              <p>MT4 계좌 로그인 후 시스템 트레이딩 주소와 파일을 설정합니다.</p>
+            </div>
+
+            <article class="step-card compact-media" id="mt4-run-step1">
+              <div class="step-copy">
+                <span class="step-label">Step 1</span>
+                <h3>MT4 계좌 로그인</h3>
+                <p>
+                  <span class="flow-path">
+                    <strong>「Xlence-Real6 서버 선택」</strong><span>→</span>
+                    <strong>「현재 거래 계좌 선택 및 입력」</strong>
+                  </span>
+                </p>
+              </div>
+              <div class="image-slider" data-slider>
+                <div class="slider-stage">
+                  <figure class="image-slot image-slide is-active is-missing" data-image="assets/screenshots/mt4-run-login-server.png">
+                    <img data-src="assets/screenshots/mt4-run-login-server.png" alt="MT4 계좌신청 화면에서 Xlence-Real6 서버 선택" />
+                    <figcaption>캡처 파일명: assets/screenshots/mt4-run-login-server.png</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/mt4-run-login-account.png" hidden>
+                    <img data-src="assets/screenshots/mt4-run-login-account.png" alt="MT4 현재 거래 계좌 로그인 정보 입력 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/mt4-run-login-account.png</figcaption>
+                  </figure>
+                </div>
+                <div class="slider-controls" aria-label="MT4 계좌 로그인 사진 선택">
+                  <button class="slider-arrow" type="button" data-slider-prev aria-label="이전 사진">&lt;</button>
+                  <button class="slider-dot is-active" type="button" data-slide-index="0" aria-label="1번 사진 선택" aria-pressed="true">1</button>
+                  <button class="slider-dot" type="button" data-slide-index="1" aria-label="2번 사진 선택" aria-pressed="false">2</button>
+                  <button class="slider-arrow" type="button" data-slider-next aria-label="다음 사진">&gt;</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="step-card compact-media warning-step">
+              <div class="step-copy">
+                <span class="step-label warning-label">주의사항</span>
+                <h3>MT4 로그인 정보 확인</h3>
+                <div class="warning">
+                  MT4 로그인 시 <strong>[로그인 - 거래 계좌]</strong>,
+                  <strong>[암호 - 비밀번호 12~15자리 입력]</strong>입니다.
+                  Xlence 로그인 입력 비밀번호와는 별개입니다.
+                </div>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/mt4-run-xlence-account.png">
+                <img data-src="assets/screenshots/mt4-run-xlence-account.png" alt="Xlence 거래 계좌 정보 확인 화면" />
+                <figcaption>캡처 파일명: assets/screenshots/mt4-run-xlence-account.png</figcaption>
+              </figure>
+            </article>
+
+            <article class="step-card compact-media" id="mt4-run-step2">
+              <div class="step-copy">
+                <span class="step-label">Step 2</span>
+                <h3>세팅 주소 추가</h3>
+                <p>
+                  <span class="flow-path">
+                    <strong>「도구」</strong><span>→</span>
+                    <strong>「옵션」</strong><span>→</span>
+                    <strong>「시스템 트레이딩」</strong><span>→</span>
+                    <strong>「시스템 트레이딩 허용」</strong><span>→</span>
+                    <strong>「표시된 URL 목록에 대한 WebRequest 허용에 세팅 주소 추가」</strong>
+                  </span>
+                </p>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/mt4-system-webrequest.gif">
+                <img data-src="assets/screenshots/mt4-system-webrequest.gif" alt="MT4 도구 옵션에서 시스템 트레이딩 WebRequest 주소를 추가하는 과정" />
+                <figcaption>캡처 파일명: assets/screenshots/mt4-system-webrequest.gif</figcaption>
+              </figure>
+            </article>
+
+            <article class="step-card compact-media warning-step">
+              <div class="step-copy">
+                <span class="step-label warning-label">주의사항</span>
+                <h3>인증 서버접속 에러 방지</h3>
+                <div class="warning">
+                  추후 세팅주소를 입력하지 않을 시 인증 서버접속 에러가 나올 수 있습니다.
+                </div>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/mt4-system-auth-error.png">
+                <img data-src="assets/screenshots/mt4-system-auth-error.png" alt="MT4 인증 서버접속 에러 알림 화면" />
+                <figcaption>캡처 파일명: assets/screenshots/mt4-system-auth-error.png</figcaption>
+              </figure>
+            </article>
+
+            <article class="step-card compact-media" id="mt4-run-step3">
+              <div class="step-copy">
+                <span class="step-label">Step 3</span>
+                <h3>시스템 트레이딩 파일 설치</h3>
+                <p>
+                  <span class="flow-path">
+                    <strong>「파일」</strong><span>→</span>
+                    <strong>「데이타 폴더 열기」</strong><span>→</span>
+                    <strong>「MQL4 및 Experts 폴더 이동」</strong><span>→</span>
+                    <strong>「폴더 내에 파일 이동」</strong><span>→</span>
+                    <strong>「탐색기 마우스 우클릭 이후 새로고침」</strong>
+                  </span>
+                </p>
+              </div>
+              <div class="image-slider" data-slider>
+                <div class="slider-stage">
+                  <figure class="image-slot image-slide is-active is-missing" data-image="assets/screenshots/mt4-system-data-folder.gif">
+                    <img data-src="assets/screenshots/mt4-system-data-folder.gif" alt="MT4 파일 메뉴에서 데이타 폴더를 여는 과정" />
+                    <figcaption>캡처 파일명: assets/screenshots/mt4-system-data-folder.gif</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/mt4-system-experts-refresh.gif" hidden>
+                    <img data-src="assets/screenshots/mt4-system-experts-refresh.gif" alt="MT4 탐색기에서 시스템 트레이딩 전문가 파일을 새로고침하는 과정" />
+                    <figcaption>캡처 파일명: assets/screenshots/mt4-system-experts-refresh.gif</figcaption>
+                  </figure>
+                </div>
+                <div class="slider-controls" aria-label="시스템 트레이딩 파일 설치 자료 선택">
+                  <button class="slider-arrow" type="button" data-slider-prev aria-label="이전 자료">&lt;</button>
+                  <button class="slider-dot is-active" type="button" data-slide-index="0" aria-label="1번 자료 선택" aria-pressed="true">1</button>
+                  <button class="slider-dot" type="button" data-slide-index="1" aria-label="2번 자료 선택" aria-pressed="false">2</button>
+                  <button class="slider-arrow" type="button" data-slider-next aria-label="다음 자료">&gt;</button>
+                </div>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="guide-page" data-guide-page="bollinger-auto" aria-label="볼린저 밴드 자동매매 세팅 방법" hidden>
+          <div class="guide-title">
+            <p class="section-number">Guide 05</p>
+            <h1>볼린저 밴드 자동매매 세팅</h1>
+          </div>
+
+          <section class="chapter" id="bollinger-auto" aria-labelledby="bollinger-auto-title">
+            <div class="chapter-heading">
+              <p class="section-number">05</p>
+              <h2 id="bollinger-auto-title">볼린저 밴드 자동매매 세팅 방법</h2>
+            </div>
+
+            <article class="concept-card" id="bollinger-auto-concept">
+              <div>
+                <span class="step-label">기본 개념</span>
+                <h3>볼린저 밴드란?</h3>
+                <p>
+                  볼린저 밴드는 가격 변동성을 보는 기술적 지표예요. 차트에 보통 3개의 선으로 표시됩니다.
+                  쉽게 말하면, 가격이 평소 움직이는 범위를 띠처럼 보여주는 도구예요.
+                </p>
+              </div>
+              <dl class="band-lines">
+                <div>
+                  <dt>가운데 선</dt>
+                  <dd>이동평균선, 보통 20일 또는 20봉 평균</dd>
+                </div>
+                <div>
+                  <dt>위쪽 밴드</dt>
+                  <dd>이동평균선 + 표준편차</dd>
+                </div>
+                <div>
+                  <dt>아래쪽 밴드</dt>
+                  <dd>이동평균선 - 표준편차</dd>
+                </div>
+              </dl>
+              <p>
+                가격 변동이 커지면 밴드가 넓어지고, 변동이 작아지면 밴드가 좁아집니다. 보통 가격이 위쪽 밴드에 가까우면
+                과열 가능성, 아래쪽 밴드에 가까우면 약세 또는 반등 가능성을 참고합니다.
+              </p>
+            </article>
+
+            <article class="step-card compact-media" id="bollinger-auto-step1">
+              <div class="step-copy">
+                <span class="step-label">Step 1</span>
+                <h3>볼린저 밴드 삽입과정</h3>
+                <p>
+                  <span class="flow-path">
+                    <strong>「시스템 트레이딩」</strong><span>→</span>
+                    <strong>「차트에 추가」</strong><span>→</span>
+                    <strong>「일반 - 실거래 가능」</strong><span>→</span>
+                    <strong>「삽입 - 세팅값 수정」</strong><span>→</span>
+                    <strong>「확인」</strong>
+                  </span>
+                </p>
+                <div class="warning">
+                  실거래가능 활성화 시에만 매매를 진행하니 항상 확인해주세요.
+                </div>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/bollinger-auto-insert.gif">
+                <img data-src="assets/screenshots/bollinger-auto-insert.gif" alt="MT4에서 볼린저 밴드 자동매매를 차트에 추가하는 과정" />
+                <figcaption>캡처 파일명: assets/screenshots/bollinger-auto-insert.gif</figcaption>
+              </figure>
+            </article>
+
+            <article class="step-card compact-media settings-card" id="bollinger-auto-step2">
+              <div class="step-copy">
+                <span class="step-label">Step 2</span>
+                <h3>볼린저 밴드 세팅 설명</h3>
+                <ul class="setting-list">
+                  <li>
+                    <strong>스프레드 제한(포인트)</strong>
+                    <span>매수가 - 매도가의 두 번째 소수자리부터 입력합니다.</span>
+                    <small>예시: 105$ - 100$일 때 500 / 10.5$ - 10$일 때 50</small>
+                  </li>
+                  <li>
+                    <strong>익절금액</strong>
+                    <span>해당 수익만큼 나올 때 익절합니다.</span>
+                  </li>
+                  <li>
+                    <strong>손절값</strong>
+                    <span>설정값만큼 손해가 났을 때 자동 손절합니다. 청산 방지 용도입니다.</span>
+                  </li>
+                  <li>
+                    <strong>추가진입 간격(포인트)</strong>
+                    <span>1번째 계약 진입 가격을 기준으로 설정값만큼 차이가 나면 추가계약이 발행됩니다.</span>
+                    <small>예시: 1000$, 설정값 100일 때 2번째 진입 시점은 1001$ / 설정값 1000일 때 1010$</small>
+                  </li>
+                  <li>
+                    <strong>단계별 랏</strong>
+                    <span>계약수입니다.</span>
+                  </li>
+                  <li>
+                    <strong>우측여백 및 하단 여백</strong>
+                    <span>대시보드의 위치를 조정합니다.</span>
+                  </li>
+                  <li>
+                    <strong>수동스케일 및 폰트 별도 스케일</strong>
+                    <span>대시보드의 크기 및 글자 크기를 조정합니다.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="image-slider" data-slider>
+                <div class="slider-stage">
+                  <figure class="image-slot image-slide is-active is-missing" data-image="assets/screenshots/bollinger-auto-settings-profit.png">
+                    <img data-src="assets/screenshots/bollinger-auto-settings-profit.png" alt="볼린저 밴드 자동매매 스프레드 제한과 익절금액 설정 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/bollinger-auto-settings-profit.png</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/bollinger-auto-settings-risk.png" hidden>
+                    <img data-src="assets/screenshots/bollinger-auto-settings-risk.png" alt="볼린저 밴드 자동매매 손절값, 추가진입, 단계별 랏, 대시보드 설정 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/bollinger-auto-settings-risk.png</figcaption>
+                  </figure>
+                </div>
+                <div class="slider-controls" aria-label="볼린저 밴드 세팅 설명 사진 선택">
+                  <button class="slider-arrow" type="button" data-slider-prev aria-label="이전 사진">&lt;</button>
+                  <button class="slider-dot is-active" type="button" data-slide-index="0" aria-label="1번 사진 선택" aria-pressed="true">1</button>
+                  <button class="slider-dot" type="button" data-slide-index="1" aria-label="2번 사진 선택" aria-pressed="false">2</button>
+                  <button class="slider-arrow" type="button" data-slider-next aria-label="다음 사진">&gt;</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="step-card compact-media" id="bollinger-auto-step3">
+              <div class="step-copy">
+                <span class="step-label">Step 3</span>
+                <h3>볼린저 밴드 보조지표 추가 방법</h3>
+                <p>
+                  <span class="flow-path">
+                    <strong>「탐색기」</strong><span>→</span>
+                    <strong>「'Bands' 폴더를 차트에 끌어 옮기기」</strong><span>→</span>
+                    <strong>「색상 및 넓이 기호에 맞게 변경」</strong>
+                  </span>
+                </p>
+              </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/bollinger-bands-indicator.png">
+                <img data-src="assets/screenshots/bollinger-bands-indicator.png" alt="MT4 탐색기 보조지표 목록에서 Bands 폴더 위치" />
+                <figcaption>캡처 파일명: assets/screenshots/bollinger-bands-indicator.png</figcaption>
+              </figure>
+            </article>
+          </section>
+        </section>
+
+      </main>
+    </div>
+
+    <button class="top-button" type="button" aria-label="맨 위로 이동">↑</button>
+
+    <dialog class="image-dialog" aria-label="이미지 크게 보기">
+      <button class="dialog-close" type="button" aria-label="닫기">×</button>
+      <button class="dialog-nav dialog-prev" type="button" aria-label="이전 사진">&lt;</button>
+      <img alt="" />
+      <button class="dialog-nav dialog-next" type="button" aria-label="다음 사진">&gt;</button>
+      <p></p>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
 </html>
