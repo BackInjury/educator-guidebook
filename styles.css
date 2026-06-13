@@ -1035,8 +1035,12 @@ h3 {
 }
 
 @media (max-width: 960px) {
+  .site-header {
+    position: static;
+  }
+
   .menu-button {
-    display: block;
+    display: none;
   }
 
   .layout {
@@ -1044,20 +1048,7 @@ h3 {
   }
 
   .sidebar {
-    position: fixed;
-    inset: 72px 0 auto 0;
-    z-index: 10;
-    height: auto;
-    max-height: calc(100vh - 72px);
-    padding: 1rem 1.5rem;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-    transform: translateY(-115%);
-    transition: transform 180ms ease;
-  }
-
-  .sidebar.is-open {
-    transform: translateY(0);
+    display: none;
   }
 
   .guide {
