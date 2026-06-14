@@ -48,6 +48,7 @@
 - `mt4-system-auth-error.png`
 - `mt4-system-data-folder.gif`
 - `mt4-system-experts-refresh.gif`
+- `mt4-run-feature-toolbar.png`
 
 ### 볼린저 밴드 자동매매 세팅
 
