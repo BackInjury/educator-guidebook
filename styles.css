@@ -621,6 +621,10 @@ h3 {
   background: #fffaf0;
 }
 
+.deposit-notice + .chapter-heading {
+  margin-top: 1.5rem;
+}
+
 .notice-kicker {
   margin-bottom: 0.9rem;
   color: #754700;

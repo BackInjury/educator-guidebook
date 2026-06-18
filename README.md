@@ -9,6 +9,7 @@
 ## 현재 가이드 메뉴
 
 - Xlence 회원가입 및 MT4 설치
+- 입출금 방법
 - MT4 실행 및 설정
 - 볼린저 밴드 자동매매 세팅 방법
 
@@ -34,10 +35,13 @@
 - `meta4 install3.png`
 - `meta4 install4.png`
 
-### 입금
+### 입출금
 
 - `xlence-deposit-digital-asset.png`
 - `xlence-deposit-online-banking.png`
+- `xlence-withdraw-internal-transfer.png`
+- `xlence-withdraw-request-submit.png`
+- `xlence-withdraw-payment-method.png`
 
 ### MT4 실행 및 설정
 

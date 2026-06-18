@@ -20,6 +20,9 @@
           <button class="header-guide-button" type="button" data-guide-target="xlence">
             Xlence 회원가입 및 MT4 설치
           </button>
+          <button class="header-guide-button" type="button" data-guide-target="deposit">
+            입출금 방법
+          </button>
           <button class="header-guide-button" type="button" data-guide-target="mt4-run">
             MT4 실행 및 설정
           </button>
@@ -49,11 +52,16 @@
             <li><a href="#mt4-install">MT4 설치</a></li>
             <li class="nav-step"><a href="#mt4-install-step1">Step 1. 설치 파일 다운로드</a></li>
             <li class="nav-step"><a href="#mt4-install-step2">Step 2. 복수실행 설정</a></li>
-            <li><a href="#xlence-deposit">입금</a></li>
+          </ol>
+          <ol data-guide-nav="deposit" hidden>
+            <li><a href="#xlence-deposit-notice">입출금 공지사항</a></li>
+            <li><a href="#xlence-deposit-methods">입금</a></li>
             <li class="nav-step"><a href="#xlence-deposit-step1">Step 1. 입금 화면 이동</a></li>
             <li class="nav-step"><a href="#xlence-deposit-step2">Step 2. 암호화폐 입금</a></li>
             <li class="nav-step"><a href="#xlence-deposit-step3">Step 3. 온라인 뱅킹 입금</a></li>
-            <li class="nav-step"><a href="#xlence-deposit-notice">입출금 공지사항</a></li>
+            <li><a href="#xlence-withdraw-methods">출금</a></li>
+            <li class="nav-step"><a href="#xlence-withdraw-step1">Step 1. 출금 화면 이동</a></li>
+            <li class="nav-step"><a href="#xlence-withdraw-step2">Step 2. 출금 요청 제출</a></li>
           </ol>
           <ol data-guide-nav="mt4-run" hidden>
             <li><a href="#mt4-run">MT4 실행 및 설정</a></li>
@@ -267,16 +275,57 @@
 
         </section>
 
-        <section class="guide-page" data-guide-page="xlence" aria-label="입금" hidden>
+        <section class="guide-page" data-guide-page="deposit" aria-label="입출금 방법" hidden>
           <div class="guide-title">
             <p class="section-number">Guide 03</p>
-            <h1>입금</h1>
+            <h1>입출금 방법</h1>
           </div>
 
-          <section class="chapter" id="xlence-deposit" aria-labelledby="xlence-deposit-title">
-            <div class="chapter-heading">
-              <p class="section-number">03</p>
-              <h2 id="xlence-deposit-title">입금</h2>
+          <section class="chapter" id="xlence-deposit" aria-label="입출금 방법">
+            <article class="deposit-notice" id="xlence-deposit-notice">
+              <p class="notice-kicker">입출금 공지사항</p>
+              <div class="notice-grid">
+                <section class="notice-panel" aria-labelledby="krw-notice-title">
+                  <h3 id="krw-notice-title">1. 원화 (KRW)</h3>
+                  <dl>
+                    <div>
+                      <dt>입금</dt>
+                      <dd>24시간, 주 7일 가능</dd>
+                    </div>
+                    <div>
+                      <dt>처리 시간</dt>
+                      <dd>평일 기준 10~20분 소요</dd>
+                    </div>
+                  </dl>
+                </section>
+
+                <section class="notice-panel" aria-labelledby="usdt-notice-title">
+                  <h3 id="usdt-notice-title">2. 테더 (USDT)</h3>
+                  <dl>
+                    <div>
+                      <dt>입금</dt>
+                      <dd>24시간, 주 7일 가능</dd>
+                    </div>
+                    <div>
+                      <dt>처리 시간</dt>
+                      <dd>평일 기준 10~20분 소요</dd>
+                    </div>
+                  </dl>
+                </section>
+              </div>
+
+              <section class="cs-hours" aria-labelledby="cs-hours-title">
+                <h3 id="cs-hours-title">CS 운영 시간 안내</h3>
+                <ol>
+                  <li>평일 CS 운영시간은 오전 9시부터 자정까지 운영됩니다.</li>
+                  <li>주말 및 공휴일은 한국 공휴일과 현지 공휴일에 맞춰 안내드리며 기본적으로 오후 6시부터 오후 11시까지 운영됩니다. 주말 업무 시에는 CS 응대에 지연이 있을 수 있습니다.</li>
+                </ol>
+              </section>
+            </article>
+
+            <div class="chapter-heading" id="xlence-deposit-methods">
+              <p class="section-number">입금</p>
+              <h2>입금</h2>
             </div>
 
             <article class="step-card text-only" id="xlence-deposit-step1">
@@ -335,65 +384,66 @@
               </figure>
             </article>
 
-            <article class="deposit-notice" id="xlence-deposit-notice">
-              <p class="notice-kicker">입출금 공지사항</p>
-              <div class="notice-grid">
-                <section class="notice-panel" aria-labelledby="krw-notice-title">
-                  <h3 id="krw-notice-title">1. 원화 (KRW)</h3>
-                  <dl>
-                    <div>
-                      <dt>입금</dt>
-                      <dd>24시간, 주 7일 가능</dd>
-                    </div>
-                    <div>
-                      <dt>출금</dt>
-                      <dd>24시간 가능</dd>
-                    </div>
-                    <div>
-                      <dt>처리 시간</dt>
-                      <dd>평일 기준 10~20분 소요</dd>
-                    </div>
-                  </dl>
-                  <h4>유의사항</h4>
-                  <ul>
-                    <li>7,000달러 이상 출금 또는 자정 이후 출금 요청 시 지연 가능</li>
-                    <li>주말 출금 요청 시 다음 영업일에 진행</li>
-                    <li>주말 원화 출금은 오후 6시부터 자정 사이 소급 진행</li>
-                  </ul>
-                </section>
+            <div class="chapter-heading" id="xlence-withdraw-methods">
+              <p class="section-number">출금</p>
+              <h2>출금</h2>
+            </div>
 
-                <section class="notice-panel" aria-labelledby="usdt-notice-title">
-                  <h3 id="usdt-notice-title">2. 테더 (USDT)</h3>
-                  <dl>
-                    <div>
-                      <dt>입금</dt>
-                      <dd>24시간, 주 7일 가능</dd>
-                    </div>
-                    <div>
-                      <dt>출금</dt>
-                      <dd>24시간 가능 (단, 수동 승인으로 원화출금보다 시간 소요)</dd>
-                    </div>
-                    <div>
-                      <dt>처리 시간</dt>
-                      <dd>평일 기준 10~20분 소요 (오후 1시 ~ 자정 요청 시)</dd>
-                    </div>
-                  </dl>
-                  <h4>유의사항</h4>
-                  <ul>
-                    <li>7,000달러 이상 출금 또는 자정 이후 출금 요청 시 지연 가능</li>
-                    <li>주말 출금 요청 시 다음 영업일에 진행</li>
-                    <li>주말 코인 출금은 오후 6시부터 오후 8시 사이 소급 진행</li>
-                  </ul>
-                </section>
+            <article class="step-card compact-media" id="xlence-withdraw-step1">
+              <div class="step-copy">
+                <span class="step-label">Step 1</span>
+                <h3>출금 화면 이동</h3>
+                <p>
+                  Xlence 로그인 후 메인화면에서
+                  <span class="flow-path">
+                    <strong>「재무」</strong><span>→</span>
+                    <strong>「내부이체」</strong><span>→</span>
+                    <strong>「거래 계좌에서 KRW 혹은 USDT 지갑으로 이체」</strong><span>→</span>
+                    <strong>「전송」</strong>
+                  </span>
+                  을 진행해주세요.
+                </p>
               </div>
+              <figure class="image-slot is-missing" data-image="assets/screenshots/xlence-withdraw-internal-transfer.png">
+                <img data-src="assets/screenshots/xlence-withdraw-internal-transfer.png" alt="Xlence 내부이체 화면에서 거래 계좌 금액을 KRW 혹은 USDT 지갑으로 이체하는 화면" />
+                <figcaption>캡처 파일명: assets/screenshots/xlence-withdraw-internal-transfer.png</figcaption>
+              </figure>
+            </article>
 
-              <section class="cs-hours" aria-labelledby="cs-hours-title">
-                <h3 id="cs-hours-title">CS 운영 시간 안내</h3>
-                <ol>
-                  <li>평일 CS 운영시간은 오전 9시부터 자정까지 운영됩니다.</li>
-                  <li>주말 및 공휴일은 한국 공휴일과 현지 공휴일에 맞춰 안내드리며 기본적으로 오후 6시부터 오후 11시까지 운영됩니다. 주말 업무 시에는 CS 응대에 지연이 있을 수 있습니다.</li>
-                </ol>
-              </section>
+            <article class="step-card compact-media" id="xlence-withdraw-step2">
+              <div class="step-copy">
+                <span class="step-label">Step 2</span>
+                <h3>출금 요청 제출</h3>
+                <p>
+                  내부이체가 완료되었다면
+                  <span class="flow-path">
+                    <strong>「재무」</strong><span>→</span>
+                    <strong>「인출」</strong><span>→</span>
+                    <strong>「출금할 KRW 혹은 USDT 계좌를 선택」</strong><span>→</span>
+                    <strong>「금액 입력 후 출금 요청 제출」</strong>
+                  </span>
+                  을 진행해주세요.
+                </p>
+                <p>지불금을 확인 후 대금 수령 방법을 선택하여 아래 <strong>「물러서다」</strong>를 눌러주세요.</p>
+              </div>
+              <div class="image-slider" data-slider>
+                <div class="slider-stage">
+                  <figure class="image-slot image-slide is-active is-missing" data-image="assets/screenshots/xlence-withdraw-request-submit.png">
+                    <img data-src="assets/screenshots/xlence-withdraw-request-submit.png" alt="Xlence 인출 화면에서 금액을 입력하고 출금 요청 제출 버튼을 확인하는 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/xlence-withdraw-request-submit.png</figcaption>
+                  </figure>
+                  <figure class="image-slot image-slide is-missing" data-image="assets/screenshots/xlence-withdraw-payment-method.png" hidden>
+                    <img data-src="assets/screenshots/xlence-withdraw-payment-method.png" alt="Xlence 지불금 화면에서 대금 수령 방법을 선택하고 물러서다 버튼을 확인하는 화면" />
+                    <figcaption>캡처 파일명: assets/screenshots/xlence-withdraw-payment-method.png</figcaption>
+                  </figure>
+                </div>
+                <div class="slider-controls" aria-label="출금 요청 제출 사진 선택">
+                  <button class="slider-arrow" type="button" data-slider-prev aria-label="이전 사진">&lt;</button>
+                  <button class="slider-dot is-active" type="button" data-slide-index="0" aria-label="1번 사진 선택" aria-pressed="true">1</button>
+                  <button class="slider-dot" type="button" data-slide-index="1" aria-label="2번 사진 선택" aria-pressed="false">2</button>
+                  <button class="slider-arrow" type="button" data-slider-next aria-label="다음 사진">&gt;</button>
+                </div>
+              </div>
             </article>
           </section>
         </section>
